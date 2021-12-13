@@ -1,0 +1,44 @@
+{
+  "name": "typesetting",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "earcut": "*",
+    "gl-matrix": "*",
+    "linebreak": "*",
+    "lodash": "*",
+    "normalize.css": "*",
+    "opentype.js": "*",
+    "pixi.js": "*",
+    "unicode-properties": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/plugin-transform-runtime": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-typescript": "*",
+    "@types/earcut": "*",
+    "@types/lodash": "*",
+    "@types/node": "*",
+    "@types/opentype.js": "*",
+    "babel-loader": "*",
+    "brfs": "*",
+    "clean-webpack-plugin": "*",
+    "copy-webpack-plugin": "*",
+    "css-loader": "*",
+    "file-loader": "*",
+    "html-webpack-plugin": "*",
+    "raw-loader": "*",
+    "shader-loader": "*",
+    "style-loader": "*",
+    "transform-loader": "*",
+    "typescript": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}
