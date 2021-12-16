@@ -55,6 +55,10 @@ export const lineBreak = (
   ) => {
     line.text += text;
     line.width += prevCharLetterSpacing + width;
+    if (prevToken) {
+      // 前面有字符，需要修改其宽度加上字间距
+      prevToken.width += prevCharLetterSpacing;
+    }
     line.height = Math.max(line.height, height);
     line.lineHeight = Math.max(line.lineHeight, lineHeight);
     line.baseLine = Math.max(line.baseLine, baseLine);
@@ -74,7 +78,7 @@ export const lineBreak = (
       height: segmentHeight,
       lineHeight: segmentLineHeight,
       baseLine: segmentBaseLine,
-    } = measureCharTokens(charTokens, prevToken, true);
+    } = measureCharTokens(charTokens, prevToken);
 
     const segmentPrevCharLetterSpacing = getLetterSpacing(
       prevToken,
@@ -113,7 +117,7 @@ export const lineBreak = (
               height: charHeight,
               lineHeight: charLineHeight,
               baseLine: charBaseLine,
-            } = measureCharTokens([currToken], null, true);
+            } = measureCharTokens([currToken], null);
 
             addNewLine(
               currToken.text,

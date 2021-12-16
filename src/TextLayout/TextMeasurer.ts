@@ -53,8 +53,7 @@ export const getLetterSpacing = (
 
 export const measureCharTokens = (
   charTokens: CharToken[],
-  prevToken: CharToken | null = null,
-  setData: boolean = false
+  prevToken: CharToken | null = null
 ) => {
   let width = 0;
   let height = 0;
@@ -97,12 +96,10 @@ export const measureCharTokens = (
     baseLine = Math.max(baseLine, glyphBaseLine);
 
     // 在引用上写入宽高和基线位置
-    if (setData) {
-      currToken.width = glyphWidth;
-      currToken.height = glyphHeight;
-      currToken.lineHeight = glyphLineHeight;
-      currToken.baseLine = glyphBaseLine;
-    }
+    currToken.width = glyphWidth;
+    currToken.height = glyphHeight;
+    currToken.lineHeight = glyphLineHeight;
+    currToken.baseLine = glyphBaseLine;
   });
 
   return { width, height, lineHeight, baseLine };

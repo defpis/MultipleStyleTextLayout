@@ -72,7 +72,7 @@ const defaultTextConfig: TextConfig = {
       fontWeight: "Regular",
       fontSize: 36,
       lineHeight: AUTO_LINE_HEIGHT,
-      letterSpacing: 0,
+      letterSpacing: 20,
       letterCase: LetterCaseType.Origin,
     },
   },
